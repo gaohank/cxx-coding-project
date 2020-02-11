@@ -19,7 +19,7 @@ set_target_properties(str_static PROPERTIES ARCHIVE_OUTPUT_DIRECTORY  ${CMAKE_BI
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 
 # 设置目标需要链接的库
-#target_link_libraries(retinaface ncnn)
+# target_link_libraries(retinaface ncnn)
 
 # 链接外部库，指定外部库路径
 # add_library(ncnn STATIC IMPORTED)
