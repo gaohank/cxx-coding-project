@@ -1,0 +1,8 @@
+project(cpp)
+# file(GLOB sources "${CMAKE_CURRENT_LIST_DIR}/01_externsion_c/02_cout_format/*.cpp")
+#add_subdirectory(01_externsion_c 01_out)
+add_subdirectory(01_externsion_c)
+add_subdirectory(02_namespace)
+add_subdirectory(03_class_objects)
+add_subdirectory(04_templates)
+add_subdirectory(05_example)
