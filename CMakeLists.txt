@@ -21,6 +21,10 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 # 设置目标需要链接的库
 #target_link_libraries(retinaface ncnn)
 
+# 链接外部库，指定外部库路径
+# add_library(ncnn STATIC IMPORTED)
+# set_property(TARGET ncnn PROPERTY IMPORTED_LOCATION /mnt/d/02-code/ncnn/build-arm64-p16/install/lib/libncnn.a)
+
 add_subdirectory(01_externsion_c)
 add_subdirectory(02_namespace)
 add_subdirectory(03_class_objects)
