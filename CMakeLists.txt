@@ -1,4 +1,4 @@
-project(cpp)
+project(cxx-coding-project)
 # file(GLOB sources "${CMAKE_CURRENT_LIST_DIR}/01_externsion_c/02_cout_format/*.cpp")
 #add_subdirectory(01_externsion_c 01_out)
 add_subdirectory(01_externsion_c)
