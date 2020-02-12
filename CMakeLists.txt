@@ -12,8 +12,8 @@ add_library(str_shared SHARED 05_example/01_mystring/mystring.cpp 05_example/01_
 add_library(str_static STATIC 05_example/01_mystring/mystring.cpp 05_example/01_mystring/mystring.h)
 
 # 设置目标输出路径
-set_target_properties(str_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib_shared/")
-set_target_properties(str_static PROPERTIES ARCHIVE_OUTPUT_DIRECTORY  ${CMAKE_BINARY_DIR}/lib_static/)
+set_target_properties(str_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib_shared/)
+set_target_properties(str_static PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib_static/)
 
 # 设置头文件路径
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
@@ -27,6 +27,9 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 
 # 指定查找文件（find_package/find_library）优先路径
 # set(CMAKE_FIND_ROOT_PATH path1 path2)
+
+# CMake执行交叉编译指令
+# cmake -DCMAKE_TOOLCHAIN_FILE=file -DANDROID_ABI="arm64-v8a" -DANDROID_ARM_NEON=ON -DANDROID_PLATFORM=android-29
 
 add_subdirectory(01_externsion_c)
 add_subdirectory(02_namespace)
