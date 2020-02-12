@@ -25,7 +25,7 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 # add_library(ncnn STATIC IMPORTED)
 # set_property(TARGET ncnn PROPERTY IMPORTED_LOCATION /mnt/d/02-code/ncnn/build-arm64-p16/install/lib/libncnn.a)
 
-# 指定查找文件（find_package）优先路径
+# 指定查找文件（find_package/find_library）优先路径
 # set(CMAKE_FIND_ROOT_PATH path1 path2)
 
 add_subdirectory(01_externsion_c)
