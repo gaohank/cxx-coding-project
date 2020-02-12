@@ -7,6 +7,11 @@ message(STATUS "CMAKE_BINARY_DIR = " ${CMAKE_BINARY_DIR})
 message(STATUS "CMAKE_CURRENT_LIST_DIR = " ${CMAKE_CURRENT_LIST_DIR})
 message(STATUS "CMAKE_CXX_STANDARD = " ${CMAKE_CXX_STANDARD})
 
+# 获得路径的文件名
+set(TEST_FILE /mnt/d/02-code/android-ndk-r20/build/cmake/android.toolchain.cmake)
+get_filename_component(TEST_FILE_NAME ${TEST_FILE} NAME)
+message(STATUS "TEST_FILE_NAME = " ${TEST_FILE_NAME})
+
 # 增加链接库目标
 add_library(str_shared SHARED 05_example/01_mystring/mystring.cpp 05_example/01_mystring/mystring.h)
 add_library(str_static STATIC 05_example/01_mystring/mystring.cpp 05_example/01_mystring/mystring.h)
