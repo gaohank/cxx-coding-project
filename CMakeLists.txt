@@ -6,6 +6,7 @@ message(STATUS "this is cxx project")
 message(STATUS "CMAKE_BINARY_DIR = " ${CMAKE_BINARY_DIR})
 message(STATUS "CMAKE_CURRENT_LIST_DIR = " ${CMAKE_CURRENT_LIST_DIR})
 message(STATUS "CMAKE_CXX_STANDARD = " ${CMAKE_CXX_STANDARD})
+message(STATUS "CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
 
 # 获得路径的文件名
 set(TEST_FILE /mnt/d/02-code/android-ndk-r20/build/cmake/android.toolchain.cmake)
