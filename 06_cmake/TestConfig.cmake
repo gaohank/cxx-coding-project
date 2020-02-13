@@ -1,0 +1,1 @@
+message("now using TestConfig.cmake find demo lib")
