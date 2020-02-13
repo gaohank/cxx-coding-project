@@ -23,7 +23,7 @@ add_library(str_static STATIC 05_example/01_mystring/mystring.cpp 05_example/01_
 set_target_properties(str_shared PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib_shared/)
 set_target_properties(str_static PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib_static/)
 
-# 设置头文件路径
+# 设置链接库头文件路径
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
 
 # 设置目标需要链接的库
