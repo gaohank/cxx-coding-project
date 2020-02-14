@@ -1,7 +1,10 @@
 #include <iostream>
 #include "head.h"
 
+using namespace std;
+
 int ctype_function(int a, int b) {
+    cout << "this is c compile function" << endl;
     return a + b;
 }
 
