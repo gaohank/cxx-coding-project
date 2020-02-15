@@ -19,3 +19,8 @@ add_executable(11_string ${CMAKE_CURRENT_LIST_DIR}/11_string/main.cpp)
 add_executable(12_struct ${CMAKE_CURRENT_LIST_DIR}/12_struct/main.cpp)
 add_executable(13_exception ${CMAKE_CURRENT_LIST_DIR}/13_exception/main.cpp)
 add_executable(14_extern ${CMAKE_CURRENT_LIST_DIR}/14_extern/main.cpp)
+add_executable(15_io ${CMAKE_CURRENT_LIST_DIR}/15_io/main.cpp)
+
+execute_process(COMMAND ${CMAKE_COMMAND} -E
+    copy ${CMAKE_CURRENT_LIST_DIR}/15_io/test.jpg
+    ${CMAKE_BINARY_DIR}/01_externsion_c/test.jpg)
