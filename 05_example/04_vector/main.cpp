@@ -107,6 +107,13 @@ void test_matrix() {
     }
 }
 
+void test_add(int buf[], int size) {
+    vector<int> vec(buf, buf + size);
+    for(int i=0; i< vec.size(); i++) {
+        cout << vec[i] << endl;
+    }
+}
+
 int main() {
     test_pop_push();
 
@@ -117,5 +124,8 @@ int main() {
     test_visit();
 
     test_matrix();
+
+    int a[] = {1,2,3};
+    test_add(a, sizeof(a) / sizeof(a[0]));
     return 0;
 }
