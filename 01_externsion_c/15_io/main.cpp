@@ -20,5 +20,10 @@ int main()
     for (int i = 0; i < obj.size(); i ++) {
         printf("%02x", obj[i]);
     }
+    printf("\n");
+    unsigned char *data = obj.data();
+    for (int i = 0; i < obj.size(); i ++) {
+        printf("%02x", data[i]);
+    }
     return 0;
 }
