@@ -1,2 +1,0 @@
-project(standard_c)
-
