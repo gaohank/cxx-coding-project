@@ -1,0 +1,2 @@
+project(standard_c)
+
