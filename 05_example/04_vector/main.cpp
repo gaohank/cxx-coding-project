@@ -114,6 +114,7 @@ void test_add(int buf[], int size) {
     }
 }
 
+
 int main() {
     test_pop_push();
 
@@ -127,5 +128,8 @@ int main() {
 
     int a[] = {1,2,3};
     test_add(a, sizeof(a) / sizeof(a[0]));
+
+    vector<float> vec;
+    cout << "empty" <<  vec.empty() << endl;
     return 0;
 }
