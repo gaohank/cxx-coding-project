@@ -25,5 +25,14 @@ int main()
     for (int i = 0; i < obj.size(); i ++) {
         printf("%02x", data[i]);
     }
+
+    // 追加形式写入文件
+    ofstream out("file.txt", ios::app);
+    if (out.fail()) {
+        cout << "ofstream error!" << endl;
+        exit(0);
+    }
+    out << "hello" << endl << "world" << endl;
+    out.close();
     return 0;
 }
