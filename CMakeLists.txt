@@ -10,6 +10,8 @@ message(STATUS "CMAKE_CXX_STANDARD = " ${CMAKE_CXX_STANDARD})
 message(STATUS "CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
 message(STATUS "CMAKE_BUILD_TYPE = ${CMAKE_BUILD_TYPE}")
 message(STATUS "CMAKE_COMMAND = ${CMAKE_COMMAND}")
+message(STATUS "CMAKE_BUILD_TYPE = ${CMAKE_BUILD_TYPE}")
+message(STATUS "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}")
 
 # 获得路径的文件名
 set(TEST_FILE /mnt/d/02-code/android-ndk-r20/build/cmake/android.toolchain.cmake)
