@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <memory.h>
 
 using namespace std;
 
@@ -131,5 +132,12 @@ int main() {
 
     vector<float> vec;
     cout << "empty" <<  vec.empty() << endl;
+
+    char * buf = (char *)malloc(100);
+    memcpy(buf, "helloworld", 11);
+    vector<char> test(buf, buf + 100);
+    free(buf);
+    cout << "free buffer" << endl;
+    cout << test.data() << endl;
     return 0;
 }
