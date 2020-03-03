@@ -1,0 +1,55 @@
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/dirent.h>
+#include <dirent.h>
+#include <cstdio>
+#include <cstring>
+
+// 遍历目录
+void printdir(const char * pathname, const int depth)
+{
+    DIR * dir;
+    struct dirent * de;
+    struct stat fs;
+    int i = 0;
+
+    if((dir = opendir(pathname)) == NULL)
+    {
+        printf("open dir %s error \r\n", pathname);
+        return;
+    }
+
+    chdir(pathname);
+    while((de = readdir(dir)) != NULL)
+    {
+        if(strcmp(de->d_name, ".") == 0 || strcmp(de->d_name, "..") == 0){continue;}
+
+        if(stat(de->d_name, &fs) == -1){perror("fstat error");continue;}
+
+        if(S_ISDIR(fs.st_mode)) {
+            for(i=0;i<depth;++i){printf(" ");}
+            printf("%s\r\n", de->d_name);
+            printdir(de->d_name, depth + 4);
+        }
+        else
+        {
+            for(i=0;i<depth;++i)
+            {
+                printf(" ");
+            }
+
+            printf("%s\r\n", de->d_name);
+        }
+    }
+    chdir("..");
+    closedir(dir);
+
+    return;
+}
+
+int main(int argc, char ** argv)
+{
+    printdir("E:/2-myproj/cxx-coding-project", 0);
+
+    return 0;
+}
