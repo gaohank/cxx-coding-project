@@ -4,6 +4,8 @@
 #include <dirent.h>
 #include <cstdio>
 #include <cstring>
+#include <io.h>
+#include <iostream>
 
 // 遍历目录
 void printdir(const char * pathname, const int depth)
@@ -47,9 +49,15 @@ void printdir(const char * pathname, const int depth)
     return;
 }
 
+using namespace std;
 int main(int argc, char ** argv)
 {
-    printdir("E:/2-myproj/cxx-coding-project", 0);
+    char buffer[100];
+    // 获得当前可执行程序所在的路径
+    getcwd(buffer, 100);
+    printdir(buffer, 0);
+
+    cout << buffer << endl;
 
     return 0;
 }
