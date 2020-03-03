@@ -4,7 +4,6 @@
 #include <dirent.h>
 #include <cstdio>
 #include <cstring>
-#include <io.h>
 #include <iostream>
 
 // 遍历目录
